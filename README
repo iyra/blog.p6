@@ -1,0 +1,31 @@
+This script allows you to start blogging quickly with Perl 6.
+
+## Features
+* Store multiple language versions for your posts
+* List posts by year/month
+* Add or edit posts through the web interface
+* No login required; only need to enter your password, specified in the script
+* Specify custom date/times when creating or editing posts
+
+## Usage
+* Install dependencies:
+
+~~~~
+zef install Digest::SHA
+git clone https://github.com/iyra/SCGI
+cd SCGI
+zef install . --force
+~~~~
+
+* Set up a web server like nginx with the following configuration inside a `server` block:
+
+~~~~
+location /blog {
+                scgi_pass localhost:8118;
+                include scgi_params;
+        }
+~~~~
+
+* Add s.css to the directory you use for your nginx `root`.
+* In a screen instance, run `perl6 blog.p6`
+* Enjoy.

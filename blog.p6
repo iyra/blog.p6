@@ -1,3 +1,8 @@
+# blog.p6, authored by iyra
+# Copyright (C) 2017 iyra
+# license: CC0 1.0 Universal Public Domain Dedication
+# https://creativecommons.org/publicdomain/zero/1.0/
+
 use SCGI;
 use Digest::SHA;
 
